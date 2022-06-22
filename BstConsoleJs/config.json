@@ -1,0 +1,11 @@
+{
+  "startupOptions": [
+    "bst",
+    "default"
+  ],
+
+  "startup": "bst",
+
+  "bstRepeat": false
+
+}

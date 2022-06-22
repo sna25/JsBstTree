@@ -1,0 +1,13 @@
+{
+  "name": "bst-js",
+  "version": "0.0.0",
+  "description": "BstJs",
+  "main": "app.js",
+  "type": "module",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "standard": "^17.0.0"
+  }
+}
