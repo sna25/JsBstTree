@@ -2,7 +2,7 @@
   "name": "bst-ts",
   "version": "0.0.0",
   "description": "BstTs",
-  "main": "app.js",
+  "main": "./js/app.js",
   "author": {
     "name": ""
   },
