@@ -7,6 +7,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BstConsoleJs", "BstConsoleJ
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BstConsoleTs", "BstConsoleTs\BstConsoleTs.njsproj", "{B291413F-5FAD-422F-9CE4-924DE21ABA32}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "BstApiTs", "BstApiTs\BstApiTs.njsproj", "{903562E3-85EC-4498-B9F5-3C8528CE92B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B291413F-5FAD-422F-9CE4-924DE21ABA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B291413F-5FAD-422F-9CE4-924DE21ABA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B291413F-5FAD-422F-9CE4-924DE21ABA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903562E3-85EC-4498-B9F5-3C8528CE92B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903562E3-85EC-4498-B9F5-3C8528CE92B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903562E3-85EC-4498-B9F5-3C8528CE92B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903562E3-85EC-4498-B9F5-3C8528CE92B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

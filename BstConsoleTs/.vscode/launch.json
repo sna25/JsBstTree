@@ -12,7 +12,7 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\js\\app.js",
-            "console": "integratedTerminal"
+            "console": "externalTerminal"
         }
     ]
 }
