@@ -40,11 +40,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bst\" />
+    <Folder Include="client\" />
+    <Folder Include="data\" />
     <Folder Include="helpers\" />
     <Folder Include="common\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="client\httpClient.ts" />
     <TypeScriptCompile Include="common\program.ts" />
+    <TypeScriptCompile Include="data\treeData.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

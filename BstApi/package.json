@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node app"
   },
-  "description": "BstApi",
+  "description": "bstApi",
+  "main": "app.js",
   "author": {
     "name": ""
   },

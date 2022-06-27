@@ -18,5 +18,7 @@
 
   "startup": "bst",
 
-  "bstRepeat": false
+  "bstRepeat": false,
+
+  "connectionString" : "http://localhost:1425"
 }
