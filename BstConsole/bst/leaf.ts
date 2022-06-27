@@ -1,3 +1,4 @@
+import treeData from '../data/treeData';
 import { guid, repeatString } from '../helpers/helper';
 import config from '../tsconfig.json';
 
@@ -59,35 +60,55 @@ export default class Leaf {
         console.log(`${margin}(${this.level}|${this.value})`);
     }
 
-    printRoot = (): void => {
+    printRoot = (toScreen: boolean): treeData => {
+        let data: treeData = new treeData(); 
         if (this.level !== 0) {
             console.log('Error: Not a root!');
-            return;
+            return data;
         }
 
-        console.log('\n=== Tree ===\n');
+        toScreen 
+            ? console.log('\n=== Tree ===\n') 
+            : data.nodes.push(this.value); // Save to DB root
+
         const session: string = guid();
         let node: Leaf = this;
         let go: boolean = true;
 
+        //Loop visit tree nodes only once
         while (go) {
+            // Save to DB from root
+            if (!toScreen && session !== node.visited){
+                if (node.left?.value ?? false){
+                    data.nodes.push(node.left.value);
+                }
+                if (node.right?.value ?? false){
+                    data.nodes.push(node.right.value);
+                }
+                node.visited = session;
+            }
+            // Go left
             if (node.left !== undefined && session !== node.left.visited) {
                 node = node.left;
                 continue;
             }
-            if (session !== node.visited) {
-                node.print();
+            // Print on screen from left to right
+            if (toScreen && session !== node.visited){
                 node.visited = session;
+                node.print();
             }
+            //Go right
             if (node.right !== undefined && session !== node.right.visited) {
                 node = node.right;
                 continue;
             }
+            //Go Top
             if (node.top !== undefined) {
                 node = node.top;
                 continue;
             }
             go = false;
         }
+        return data;
     }
 }

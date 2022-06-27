@@ -12,7 +12,6 @@ router.get('/ping', function (req, res) {
 
 router.get('/', function (req, res) {
     const id = req.query.id;
-    console.log(`GET /: ${id}`)
 
     let tree = new treeData();
 
@@ -20,8 +19,11 @@ router.get('/', function (req, res) {
     if (id === '1'){
         tree.nodes = [1, 3, 54, 34, 78, 76, 43, 23, 5, 1, 4, 11];
     }
+    if (id === '1A'){
+        tree.nodes = [1, 3, 54, 34, 78, 23, 43, 5, 4, 11, 76];
+    }
     else if (id === '2'){
-        tree.nodes = [2, 8, 53, 323, 72, 712, 23, 13, 6, 3, 12];
+        tree.nodes = [2, 2, 8, 53, 323, 72, 712, 23, 13, 6, 3, 12, 12];
     }
     /// MUU
 
@@ -37,21 +39,35 @@ router.get('/', function (req, res) {
 
 router
 .post('/', function (req, res) {
-    console.log('POST /')
+    const id = req.query.id;
     console.dir(req.body)
-    
-    let tree = new treeData();
-    tree.nodes = req.body.nodes;
+    const tree = req.body;
+    let duplicated = false;
 
     /// MUU
-    for (const node of tree.nodes)
+    if (id === 'd')
     {
-        console.log(node);
+        duplicated = true;
     }
     /// MUU
 
-    res.writeHead(200, { 'Content-Type': 'text/html' })
-    res.end('Data posted')
+    if (duplicated){
+        res.writeHead(204, { 'Content-Type': 'text/html' })
+        res.end()
+        console.log('Duplicated Id')
+    }
+    else{      
+
+        /// MUU
+        for (const node of tree.nodes)
+        {
+            console.log(node);
+        }
+        /// MUU
+
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end('Data posted')
+    }
 })
 
 module.exports = router;

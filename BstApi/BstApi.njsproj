@@ -36,12 +36,10 @@
     <Content Include="models\treeData.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="views\layout.pug" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
     <Folder Include="routes\" />
-    <Folder Include="views\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
